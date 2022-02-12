@@ -121,6 +121,6 @@ public class SimpleModuleScript : MonoBehaviour {
 
 	void Log(string message)
 	{
-		Debug.LogFormat("[Black Screens #{0}] {1}", ModuleId, message);
+		Debug.LogFormat("[Speedrun #{0}] {1}", ModuleId, message);
 	}
 }
