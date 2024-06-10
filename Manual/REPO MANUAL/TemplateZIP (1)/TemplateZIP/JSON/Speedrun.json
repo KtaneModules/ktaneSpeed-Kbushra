@@ -1,0 +1,18 @@
+{
+  "Author": "ThatOneKid",
+  "BossStatus": "SemiBoss",
+  "Compatibility": "Compatible",
+  "DefuserDifficulty": "VeryHard",
+  "Description": "Solve a module quickly. Tags: Fast, Solve, Needy",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "speed",
+  "Name": "Speedrun",
+  "Origin": "Mods",
+  "Published": "2022-02-12",
+  "Quirks": "NeedsOtherSolves",
+  "SortKey": "SPEEDRUN",
+  "SourceUrl": "https://github.com/Kbushra/ktaneSpeed",
+  "SteamID": "2751138793",
+  "Symbol": "Spdr",
+  "Type": "Needy"
+}
