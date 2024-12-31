@@ -21,8 +21,6 @@ public class SimpleModuleScript : MonoBehaviour {
 
 	public TextMesh[] screenTexts;
 
-	public AudioSource correct;
-
 	public string textFinder1;
 
 	static int ModuleIdCounter;
@@ -74,8 +72,7 @@ public class SimpleModuleScript : MonoBehaviour {
 
 	public void OnNeedyDeactivation()
 	{
-		correct.Play();
-		textFinder1 = "GG";
+        textFinder1 = "GG";
 		screenTexts[0].text = textFinder1;
 		_isSolved = true;
 	}
