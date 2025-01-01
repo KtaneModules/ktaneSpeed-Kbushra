@@ -33,7 +33,6 @@ public class SimpleModuleScript : MonoBehaviour {
 		GetComponent<KMNeedyModule> ().OnNeedyActivation += OnNeedyActivation;
 		GetComponent<KMNeedyModule> ().OnNeedyDeactivation += OnNeedyDeactivation;
 		GetComponent<KMNeedyModule> ().OnTimerExpired += OnTimerExpired;
-		GetComponent<KMNeedyModule> ().OnNeedyDeactivation += OnNeedySolved;
 
 		foreach (KMSelectable button in button)
 		{
@@ -56,13 +55,14 @@ public class SimpleModuleScript : MonoBehaviour {
 		needyActivated = true;
 	}
 
-	public void OnNeedySolved()
-	{
-		textFinder1 = "Hey cool dude!";
-		screenTexts[0].text = textFinder1;
-	}
+    public void OnNeedyDeactivation()
+    {
+        textFinder1 = "GG";
+        screenTexts[0].text = textFinder1;
+        _isSolved = true;
+    }
 
-	public void OnTimerExpired()
+    public void OnTimerExpired()
 	{
 		textFinder1 = "Hey cool dude!";
 		screenTexts[0].text = textFinder1;
@@ -70,14 +70,13 @@ public class SimpleModuleScript : MonoBehaviour {
 		module.HandlePass ();
 	}
 
-	public void OnNeedyDeactivation()
-	{
-        textFinder1 = "GG";
-		screenTexts[0].text = textFinder1;
-		_isSolved = true;
-	}
+    public void OnNeedySolved()
+    {
+        textFinder1 = "Hey cool dude!";
+        screenTexts[0].text = textFinder1;
+    }
 
-	public void buttonPress(KMSelectable pressedButton)
+    public void buttonPress(KMSelectable pressedButton)
 	{
 		GetComponent<KMAudio>().PlayGameSoundAtTransformWithRef(KMSoundOverride.SoundEffect.ButtonPress, transform);
 		int buttonPosition = new int();
