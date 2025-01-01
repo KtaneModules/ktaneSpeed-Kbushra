@@ -867,7 +867,7 @@ MonoBehaviour:
   CountdownTime: 5
   ResetDelayMin: 10
   ResetDelayMax: 40
-  ModuleType: speed
+  ModuleType: speedrun
   ModuleDisplayName: Speedrun
   RequiresTimerVisibility: 0
   WarnAtFiveSeconds: 1
